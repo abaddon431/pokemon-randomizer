@@ -1,0 +1,267 @@
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  /* background-color: #eff3ff; */
+  background-image: url("bg-2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding:0px 200px 100px 200px;
+}
+
+.column {
+  float: left;
+  width: 33%;
+  padding: 10px;
+}
+
+.row {margin: 0 -5px;}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 16px;
+  text-align: center;
+  background: linear-gradient(to right top, rgba(255, 255, 255, 0.1) 85%, rgba(255, 255, 255, 0.1) 85%, #c5c5c5 80%),linear-gradient(0deg, white 60%, white 60%, rgb(207, 207, 207) 60%);
+}
+.card img {
+  display: block;
+  width: 150px;
+  max-height: 200px;
+  position: relative;
+  margin: 20px auto;
+  transition: transform 0.5s;
+}
+.card img:hover {
+  transform: scale(1.1,1.1);
+  -webkit-animation: bounceIn .5s 1 alternate;
+  /* Chrome, Safari, Opera */
+  
+  animation: bounceIn .5s 1 alternate;
+}
+.card:hover{
+  -webkit-animation: floating 1s infinite;
+  animation: floating 1s infinite;
+}
+.card .ball:hover{
+  transform: scale(1,1);
+  -webkit-animation: shake .5s 1 alternate;
+  animation: shake .5s 1 alternate;
+}
+
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 5px); }
+  100%   { transform: translate(0, -0px); }   
+}
+@keyframes shake {
+  0% {
+    transform: rotate(7deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-7deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes bounceIn {
+	0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+	40% {
+    transform: translateY(-30px);
+  }
+	60% {
+    transform: translateY(-15px);
+  }
+}
+
+.poke-name {
+  text-align: center;
+  font-weight: 600;
+}
+.type {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0 40px 0;
+}
+
+.hp {
+  width: 80px;
+  background-color: #ffffff;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 30px;
+  margin-left: auto;
+  font-weight: 400;
+}
+.hp span{
+  padding: 10px 20px 10px 20px;
+}
+.hp .span,
+.type span {
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  font-weight: 600;
+}
+.type span {
+  padding: 5px 20px;
+  border-radius: 20px;
+  color: #ffffff;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 0px 20px 20px 20px;
+}
+
+.stats p {
+  color: #404060;
+}
+
+.header-banner {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  width: 500px;
+}
+
+/* typing colors */
+.type-bug{
+  background-color: #A6B91A;
+}
+.type-dragon{
+  background-color: #6F35FC;
+}
+.type-electric{
+  background-color: #F7D02C;
+}
+.type-fairy{
+  background-color: #D685AD;
+}
+.type-fighting{
+  background-color: #C22E28;
+}
+.type-fire{
+  background-color: #EE8130;
+}
+
+.type-flying{
+  background-color: #A98FF3;
+}
+
+.type-grass{
+  background-color: #7AC74C;
+}
+
+.type-ground{
+  background-color: #E2BF65;
+}
+
+.type-ghost{
+  background-color: #735797;
+}
+
+.type-ice{
+  background-color: #96D9D6;
+}
+
+.type-normal{
+  background-color: #A8A77A;
+}
+
+.type-poison{
+  background-color: #A33EA1;
+}
+
+.type-psychic{
+  background-color: #F95587;
+}
+.type-rock{
+  background-color: #B6A136;
+}
+.type-water{
+  background-color: #6390F0;
+}
+.type-dark{
+  background-color: #705746;
+}
+.type-steel{
+  background-color: #B7B7CE;
+}
+/* inputs */
+
+input[type=text] {
+  padding: 12px 20px;
+  margin: 0px 0px 0px 25%;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+input[type=button] {
+  width: 50%;
+  background-color: #3da2e6;
+  color: white;
+  padding: 14px 20px;
+  margin: 0px 0px 0px 25%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=button]:hover {
+  background-color: #337eaf;
+}
+
+#save-team,#load-team,#del-team{
+  background-color: #3da2e6;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#save-team:hover,#load-team:hover,#del-team:hover{
+  background-color: #2f79aa;
+}
+#dl-team{
+  text-decoration: none;
+  background-color: #3da2e6;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#dl-team:hover{
+  background-color: #2f79aa;
+}
+
+.reroll:hover{
+  cursor: pointer;
+}

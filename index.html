@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokémon Team Generator! </title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"/>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      rel="stylesheet"/>
+    <!-- sweetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.26/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="header">
+      <a href="index.html"><img src="banner.png" class="header-banner"></a>
+      <input type="text" id="team-name" placeholder="Team Name"/>
+      <button type="button" id="save-team"><i class="fa-lg fa-solid fa-floppy-disk"></i></button>
+      <a id="dl-team"><i class="fa-lg fa-solid fa-file-export"></i></a>
+      <button type="button" id="del-team"><i class="fa-lg fa-solid fa-trash-can"></i></button>
+    </div>
+    <div class="row">
+      <div class="column">
+        <div class="card" id="pokemon-0">
+          <p class="hp">
+            <span class="reroll" id=0><i class="fa-solid fa-arrows-rotate"></i></span>
+          </p>
+          <img src="poke-default.png" class="ball"/>
+          <h2 class="poke-name">--</h2>
+          <div id="types-0" class="type">
+            ?
+          </div>
+          <div class="stats">
+            <div>
+              <h3>?</h3>
+              <p>Attack</p>
+            </div>
+            <div>
+              <h3>?</h3>
+              <p>Defense</p>
+            </div>
+            <div>
+              <h3>?</h3>
+              <p>Speed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card" id="pokemon-1">
+          <p class="hp">
+            <span class="reroll" id=1><i class="fa-solid fa-arrows-rotate"></i></span>
+          </p>
+          <img src="poke-default.png" class="ball"/>
+          <h2 class="poke-name">--</h2>
+          <div id="types-1" class="type">?
+          </div>
+          <div class="stats">
+            <div>
+              <h3>?</h3>
+              <p>Attack</p>
+            </div>
+            <div>
+              <h3>?</h3>
+              <p>Defense</p>
+            </div>
+            <div>
+              <h3>?</h3>
+              <p>Speed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card" id="pokemon-2">
+          <p class="hp">
+            <span class="reroll" id=2><i class="fa-solid fa-arrows-rotate"></i></span>
+          </p>
+          <img src="poke-default.png" class="ball"/>
+          <h2 class="poke-name">--</h2>
+          <div id="types-2" class="type">?
+          </div>
+          <div class="stats">
+            <div>
+              <h3>?</h3>
+              <p>Attack</p>
+            </div>
+            <div>
+              <h3>?</h3>
+              <p>Defense</p>
+            </div>
+            <div>
+              <h3>?</h3>
+              <p>Speed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <div class="row">
+      <div class="column">
+        <div class="card" id="pokemon-3">
+          <p class="hp">
+            <span class="reroll" id=3><i class="fa-solid fa-arrows-rotate"></i></span>
+          </p>
+          <img src="poke-default.png" class="ball"/>
+          <h2 class="poke-name">--</h2>
+          <div id="types-3" class="type">?
+          </div>
+          <div class="stats">
+            <div>
+              <h3>?</h3>
+              <p>Attack</p>
+            </div>
+            <div>
+              <h3>?</h3>
+              <p>Defense</p>
+            </div>
+            <div>
+              <h3>?</h3>
+              <p>Speed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card" id="pokemon-4">
+          <p class="hp">
+            <span class="reroll" id=4><i class="fa-solid fa-arrows-rotate"></i></span>
+          </p>
+          <img src="poke-default.png" class="ball"/>
+          <h2 class="poke-name">--</h2>
+          <div id="types-4" class="type">?
+          </div>
+          <div class="stats">
+            <div>
+              <h3>?</h3>
+              <p>Attack</p>
+            </div>
+            <div>
+              <h3>?</h3>
+              <p>Defense</p>
+            </div>
+            <div>
+              <h3>?</h3>
+              <p>Speed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card" id="pokemon-5">
+          <p class="hp">
+            <span class="reroll" id=5><i class="fa-solid fa-arrows-rotate"></i></span>
+          </p>
+          <img src="poke-default.png" class="ball"/>
+          <h2 class="poke-name">--</h2>
+          <div id="types-5" class="type">?
+          </div>
+          <div class="stats">
+            <div>
+              <h3>?</h3>
+              <p>Attack</p>
+            </div>
+            <div>
+              <h3>?</h3>
+              <p>Defense</p>
+            </div>
+            <div>
+              <h3>?</h3>
+              <p>Speed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+    
+    <input type="button" id="generate_team" value="Generate Team">
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
