@@ -242,7 +242,10 @@ input[type=button]:hover {
 .container{
   display: flex;
   justify-content: center;
-
+  flex-wrap: wrap;
+}
+.input-controls{
+  margin: 10px 0px 0px 20px;
 }
 
 #save-team,#load-team,#del-team{
