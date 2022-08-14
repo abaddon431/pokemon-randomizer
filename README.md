@@ -1,4 +1,4 @@
-![screenshot](https://raw.githubusercontent.com/abaddon431/pokemon-randomizer/master/sample.png)
+![screenshot](https://raw.githubusercontent.com/abaddon431/pokemon-randomizer/master/imagse/sample.png)
 #
 # Pokemon Team Randomizer
 
