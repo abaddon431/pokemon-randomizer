@@ -256,6 +256,14 @@ input[type=button]:hover {
   border-radius: 4px;
   cursor: pointer;
 }
+.custom-file-upload{
+  background-color: #3da2e6;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
 #save-team:hover,#load-team:hover,#del-team:hover{
   background-color: #2f79aa;
 }
@@ -276,6 +284,9 @@ input[type=button]:hover {
   cursor: pointer;
 }
 
+input[type="file"] {
+  display: none;
+}
 
 /* responsive layout*/
 @media only screen and (max-width: 1000px) {
@@ -310,3 +321,4 @@ input[type=button]:hover {
     grid-column-end: span 6;
   }
 }
+

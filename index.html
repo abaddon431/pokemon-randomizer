@@ -22,10 +22,13 @@
             <input type="text" id="team-name" placeholder="Team Name"/>
         </div>
         <div class="input-controls">
-          
           <button type="button" id="save-team"><i class="fa-lg fa-solid fa-floppy-disk"></i></button>
           <a id="dl-team"><i class="fa-lg fa-solid fa-file-export"></i></a>
           <button type="button" id="del-team"><i class="fa-lg fa-solid fa-trash-can"></i></button>
+          <label for="json_file" class="custom-file-upload">
+            <i class="fa-lg fa-solid fa-file-upload"></i>
+          </label>
+          <input type="file" id="json_file" name="json_file" onchange="load_json(this);" />
         </div>
      </div>
     </div>

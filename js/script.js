@@ -283,7 +283,43 @@ function rerollEvent(){
         });
     })
 }
+function load_json(input){
+    let fileTypes = ['json'];
+    let file = input.files[0];
+    let extension = input.files[0].name.split('.').pop().toLowerCase(),isSuccess = fileTypes.indexOf(extension) > -1;
 
+    if(isSuccess){
+        let reader = new FileReader();
+        reader.readAsText(file);
+        reader.onload = function(){
+            let json_team = JSON.parse(reader.result);
+            localStorage.removeItem("team_info");
+            localStorage.setItem("team_info",reader.result);
+            createLink();
+            Swal.fire(
+                "Team Loaded!",
+                `${json_team[0]} has been loaded, your browser will now refresh!`,
+                "success",
+            ).then((result)=>{
+                document.getElementById("json_file").value="";
+                setTimeout(function(){ window.location.reload() }, 500);
+            });
+        };
+    
+        reader.onerror = function(){
+            console.log(reader.error);
+        };
+    }
+    else{
+        Swal.fire(
+            "Error!",
+            "The file should be in json format!",
+            "error"
+        );
+        document.getElementById("json_file").value="";
+    }
+    
+}
 // button events
 
 const generate = document.getElementById("generate_team");
